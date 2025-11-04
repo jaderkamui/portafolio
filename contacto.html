@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mi Portafolio Web – Jader</title>
+  <meta name="description" content="Portafolio de Jader: Full Stack JS, automatización Cisco, microcontroladores y fabricación digital (3D/CNC)." />
+  <link rel="stylesheet" href="styles.css">
+
+  
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav aria-label="Navegación principal">
+        <div class="nav-left">
+          <a href="./index.html">Sobre Mí</a>
+          <a href="./index.html">Intereses</a>
+          <a href="./index.html">Mis Proyectos</a>
+          <a href="./contacto.html">Contacto</a>
+        </div>
+        <div class="nav-right">
+          <button class="theme-btn" id="themeToggle" aria-label="Cambiar tema">🌗 Tema</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+    <main>
+        <!-- CONTACTO -->
+      <div class="wrap">
+        <h2 class="section-title" id="tit-contacto">Contacto</h2>
+        <div class="card">
+          <p>¿Colaboramos? Escríbeme y conversemos tu proyecto.</p>
+
+          <!-- 👇 Reemplaza TU-EMAIL@DOMINIO.COM por tu correo real -->
+          <form action="https://formsubmit.co/tecnico.jader@gmail.com" method="POST" aria-label="Formulario de contacto">
+            <!-- Antispam (honeypot) -->
+            <input type="text" name="_honey" style="display:none">
+            <!-- Desactivar captcha de FormSubmit -->
+            <input type="hidden" name="_captcha" value="false">
+            <!-- Redirección (opcional): pon tu propia página de gracias -->
+            <input type="hidden" name="_next" value="http://127.0.0.1:5500/codigo%20tareas/tarea/gracias.html">
+            <input type="hidden" name="_subject" value="Nuevo mensaje desde el formulario de tu portafolio">
+            <input type="hidden" name="_template" value="table">
+
+            <div>
+              <label for="nombre">Nombre</label>
+              <input id="nombre" name="nombre" type="text" placeholder="Escribe tu nombre" required />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="tucorreo@ejemplo.com" required />
+            </div>
+            <div>
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" placeholder="Cuéntame sobre tu idea" required></textarea>
+            </div>
+            <button type="submit">Enviar mensaje</button>
+          </form>
+
+          <p style="margin-top:10px">
+            También puedes ver mi trabajo en
+            <a class="link" href="https://github.com/jaderkamui" target="_blank" rel="noopener">GitHub</a>
+            o conectar por
+            <a class="link" href="https://www.linkedin.com/in/jader-munoz-ramos-47046715a/" target="_blank" rel="noopener">LinkedIn</a>.
+          </p>
+        </div>
+      </div>
+    </main>
+  <footer>
+    <div class="wrap">
+      <p>© <span id="y"></span> Jader. Hecho con HTML5 semántico. Tema claro/oscuro con JS.</p>
+    </div>
+  </footer>
+
+      <script>
+    // ====== Persistencia de tema (prefiere sistema + toggle) ======
+    const root = document.documentElement;
+    const themeToggle = document.getElementById('themeToggle');
+    const saved = localStorage.getItem('theme');
+
+    function setTheme(mode){
+      root.setAttribute('data-theme', mode);
+      localStorage.setItem('theme', mode);
+    }
+
+    // Inicial: respeta preferencia guardada o del SO
+    if(saved){
+      setTheme(saved);
+    }else{
+      const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+      setTheme(prefersLight ? 'light' : 'dark');
+    }
+
+    themeToggle.addEventListener('click', ()=>{
+      const current = root.getAttribute('data-theme');
+      setTheme(current === 'light' ? 'dark' : 'light');
+    });
+
+    // ====== Realce de enlace activo al hacer scroll ======
+    const sections = [...document.querySelectorAll('section[id]')];
+    const links = [...document.querySelectorAll('nav a')];
+
+    const spy = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        const id = entry.target.getAttribute('id');
+        const link = links.find(a=> a.getAttribute('href') === '#' + id);
+        if(link){
+          if(entry.isIntersecting){
+            links.forEach(a=>a.classList.remove('is-active'));
+            link.classList.add('is-active');
+          }
+        }
+      });
+    }, {threshold: 0.6});
+
+    sections.forEach(sec=> spy.observe(sec));
+
+    // ====== Revelado suave de tarjetas ======
+    const reveal = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          e.target.classList.add('revealed');
+          reveal.unobserve(e.target);
+        }
+      });
+    }, {threshold: .2});
+
+    document.querySelectorAll('.card').forEach(el=>reveal.observe(el));
+
+    // Año dinámico footer
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
