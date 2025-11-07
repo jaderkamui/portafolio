@@ -1,127 +1,167 @@
 <!DOCTYPE html>
-<html lang="es" data-theme="">
+<html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mi Portafolio Web – Jader</title>
   <meta name="description" content="Portafolio de Jader: Full Stack JS, automatización Cisco, microcontroladores y fabricación digital (3D/CNC)." />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Tu CSS -->
   <link rel="stylesheet" href="styles.css">
-
-  
 </head>
-<body>
-  <!-- CABECERA -->
-  <header>
-    <div class="wrap">
-      <nav aria-label="Navegación principal">
-        <div class="nav-left">
-          <a href="#sobre-mi">Sobre Mí</a>
-          <a href="#intereses">Intereses</a>
-          <a href="#proyectos">Mis Proyectos</a>
-          <a href="./contacto.html">Contacto</a>
-        </div>
-        <div class="nav-right">
-          <button class="theme-btn" id="themeToggle" aria-label="Cambiar tema">🌗 Tema</button>
-        </div>
-      </nav>
+<body class="bg-body-custom text-light">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#hero">Jader</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
+          <li class="nav-item"><a class="nav-link" href="#intereses">Intereses</a></li>
+          <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
+        <button class="btn btn-outline-info btn-sm" id="themeToggle" type="button">🌗 Tema</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="hero" class="py-5">
+    <div class="container">
+      <span class="badge rounded-pill text-bg-info mb-3">Portafolio • Full Stack JS • Redes • 3D</span>
+      <h1 class="display-5 fw-bold">Jader – Desarrollador Full Stack & Tech Maker</h1>
+      <p class="lead text-secondary">
+        Técnico Electrónico y estudiante de Ingeniería Informática, con 19 años de experiencia en soporte TI, automatización e IoT, desarrollo web y fabricación digital.
+      </p>
+      <div class="d-flex gap-3 flex-wrap">
+        <a class="btn btn-info" href="https://github.com/jaderkamui" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-outline-light" href="https://www.linkedin.com/in/jader-munoz-ramos-47046715a/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="wrap hero">
-    <span class="pill">Portafolio • Full Stack JS • Redes • 3D</span>
-    <h1>Jader – Desarrollador Full Stack & Tech Maker</h1>
-    
-      <a class="link" href="https://github.com/jaderkamui" target="_blank" rel="noopener">GitHub</a> ·
-      <a class="link" href="https://www.linkedin.com/in/jader-munoz-ramos-47046715a/" target="_blank" rel="noopener">LinkedIn</a>
-    </p>
-  </section>
-
-  <main>
+  <main class="pb-5">
     <!-- SOBRE MÍ -->
-    <section id="sobre-mi" aria-labelledby="tit-sobre-mi">
-      <div class="wrap">
-        <h2 class="section-title" id="tit-sobre-mi">Sobre Mí</h2>
-       <div class="card">
-  <p>
-    Soy <strong>Técnico Electrónico</strong> y <strong>Estudiante de Ingeniería Informática</strong>, con más de <strong>19 años de experiencia en Soporte TI</strong> y desarrollo de soluciones tecnológicas integrales.
-    Mi trayectoria combina <strong>hardware, software y redes</strong>, especializándome en <strong>automatización IoT, desarrollo web Full Stack</strong> y proyectos de <strong>impresión 3D</strong>.
-  </p>
-
-  <p>
-    He trabajado con empresas líderes como <strong>IBM, HP, Sonda, Dell, Entel, Kyocera y Corpesca</strong>, liderando proyectos de migración tecnológica, soporte remoto y mantenimiento de infraestructura.
-    Mi certificación <strong>ITIL®</strong> respalda mi compromiso con la mejora continua y la satisfacción del cliente.
-  </p>
-
-  <p>
-    Como desarrollador, domino entornos <strong>MEAN / LAMP / MEVN</strong> y herramientas modernas como <strong>Node.js, React, Vue.js, PHP, Python</strong> y <strong>SQL</strong>.
-    Además, tengo experiencia en automatización con <strong>Arduino, ESP32 y Raspberry Pi</strong>, diseño de sistemas embebidos, y desarrollo de plataformas IoT.
-  </p>
-
-  <h3>Habilidades Clave</h3>
-  <ul class="skills">
-    <li><strong>Software:</strong> Windows, Linux, Power BI, AWS, Google Cloud, Postman</li>
-    <li><strong>Desarrollo:</strong> JavaScript, PHP (Laravel), Python, C#, SQL, Kotlin, HTML, CSS</li>
-    <li><strong>Diseño:</strong> UX/UI, Figma, Blender, Diseño 3D e Impresión 3D</li>
-    <li><strong>Hardware:</strong> Microcontroladores, CCTV, cableado estructurado, control de acceso</li>
-    <li><strong>Habilidades Blandas:</strong> Comunicación, adaptabilidad, liderazgo técnico, aprendizaje continuo</li>
-  </ul>
-</div>
-
+    <section id="sobre-mi" class="py-5">
+      <div class="container">
+        <h2 class="mb-4">Sobre mí</h2>
+        <div class="row">
+          <div class="col-lg-10">
+            <div class="card bg-card-custom border-0 shadow-sm">
+              <div class="card-body">
+                <p>
+                  Soy <strong>Técnico Electrónico</strong> y <strong>Estudiante de Ingeniería Informática</strong>, con más de <strong>19 años de experiencia en Soporte TI</strong> y desarrollo de soluciones tecnológicas integrales.
+                  He trabajado con empresas como <strong>IBM, HP, Sonda, Dell, Entel, Kyocera y Corpesca</strong>.
+                </p>
+                <p>
+                  Manejo entornos <strong>MEAN / LAMP / MEVN</strong>, <strong>Node.js</strong>, <strong>PHP</strong>, <strong>Python</strong>, <strong>SQL</strong> y automatización con <strong>Arduino, ESP32 y Raspberry Pi</strong>.
+                </p>
+                <h3 class="h5 mt-3">Habilidades clave</h3>
+                <ul class="mb-0">
+                  <li>Software: Windows, Linux, Power BI, AWS, Google Cloud, Postman</li>
+                  <li>Desarrollo: JavaScript, PHP/Laravel, Python, C#, SQL, HTML, CSS</li>
+                  <li>Diseño: UX/UI, Figma, Blender, 3D e impresión 3D</li>
+                  <li>Hardware y redes: microcontroladores, CCTV, cableado estructurado</li>
+                  <li>Blandas: comunicación, adaptabilidad, liderazgo técnico</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-        <!-- Intereses -->
-    <section id="intereses" aria-labelledby="tit-intereses">
-      <div class="wrap">
-        <h2 class="section-title" id="tit-intereses">Mis Intereses</h2>
-       <div class="card">
-  <p>
-    Me gusta mucho la Informatica, sobre todo la innovacion, entre mis intereses estan los <strong>Videojuegos</strong> y quiero aprender sobre <strong>Desarrollo de Videojuegos</strong>, me gusta mucho leer y mi escritor favorito es  <strong>Howard Phillips Lovecraft</strong>
-    entre otras cosas me gustan <strong>las series de ciencia ficcion y el anime</strong>, tambien dedico tiempo a mi familia, mi sueño es <strong>crear un videojuego que sea famoso</strong> y vivir de mis hobbys como <strong>dibujar y diseñar en 3D</strong>.
-  </p>
-  </div>
+    <!-- INTERESES -->
+    <section id="intereses" class="py-5">
+      <div class="container">
+        <h2 class="mb-4">Mis intereses</h2>
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="card bg-card-custom border-0 shadow-sm">
+              <div class="card-body">
+                <p>
+                  Me gusta la innovación, los <strong>videojuegos</strong> y quiero profundizar en <strong>desarrollo de videojuegos</strong>. Me inspira <strong>H. P. Lovecraft</strong>, disfruto las series de ciencia ficción y el anime. 
+                  Mi sueño es crear un videojuego conocido y combinarlo con mis hobbies como <strong>dibujo y diseño 3D</strong>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- PROYECTOS -->
-    <section id="proyectos" aria-labelledby="tit-proyectos" class="projects">
-      <div class="wrap">
-        <h2 class="section-title" id="tit-proyectos">Mis Proyectos</h2>
-        <div class="grid">
-          <article class="card project">
-            <h3>NetZen – Automatización Cisco (Python, Telnet/SSH)</h3>
-            <p>Conexión y ejecución de comandos en equipos Cisco para respaldos y diagnósticos eficientes.</p>
-            <div class="tags"><span class="tag">Python</span><span class="tag">SSH/Telnet</span><span class="tag">Redes</span></div>
-            <img src="./img/netzen.png" alt="">
-          </article>
+    <section id="proyectos" class="py-5">
+      <div class="container">
+        <h2 class="mb-4">Mis proyectos</h2>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 bg-card-custom border-0 shadow-sm">
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5">NetZen – Automatización Cisco</h3>
+                <p class="flex-grow-1">Conexión y ejecución de comandos en equipos Cisco por Telnet/SSH para respaldos y diagnósticos.</p>
+                <div class="mt-2">
+                  <span class="badge bg-secondary me-1">Python</span>
+                  <span class="badge bg-secondary me-1">SSH/Telnet</span>
+                  <span class="badge bg-secondary">Redes</span>
+                </div>
+              </div>
+              <img src="./img/netzen.png" class="card-img-bottom img-fluid rounded-bottom" alt="NetZen">
+            </div>
+          </div>
 
-          <article class="card project">
-            <h3>Plataforma de Bodega & Retiros (PHP + MySQL)</h3>
-            <p>Platafoma Web de Gestión de productos en bodega, solicitudes de retiros, roles, Areas, Divisiones y auditoría de movimientos.</p>
-            <div class="tags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">CRUD</span></div>
-            <img src="./img/bodega.png" alt="">
-          </article>
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 bg-card-custom border-0 shadow-sm">
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5">Plataforma de Bodega & Retiros</h3>
+                <p class="flex-grow-1">Gestión de productos, retiros, roles, áreas y auditoría de movimientos desarrollada en PHP + MySQL.</p>
+                <div class="mt-2">
+                  <span class="badge bg-secondary me-1">PHP</span>
+                  <span class="badge bg-secondary me-1">MySQL</span>
+                  <span class="badge bg-secondary">CRUD</span>
+                </div>
+              </div>
+              <img src="./img/bodega.png" class="card-img-bottom img-fluid rounded-bottom" alt="Bodega">
+            </div>
+          </div>
 
-          <article class="card project">
-            <h3>Microcontroladores, Raspberry & IoT (C/C++)</h3>
-            <p>Desarrollo en Microcontroladores, Prototipos con sensores/actuadores: adquisición de datos, control y reporte.</p>
-            <div class="tags"><span class="tag">C/C++</span><span class="tag">Vue</span><span class="tag">Angular</span></div>
-            <img src="https://blog.usro.net/media/2025/02/esp32-c-vs-c-1600x1067.jpg" alt="">
-          </article>
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 bg-card-custom border-0 shadow-sm">
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5">Microcontroladores, Raspberry & IoT</h3>
+                <p class="flex-grow-1">Prototipos con sensores/actuadores, adquisición de datos y control.</p>
+                <div class="mt-2">
+                  <span class="badge bg-secondary me-1">C/C++</span>
+                  <span class="badge bg-secondary me-1">IoT</span>
+                  <span class="badge bg-secondary">Embebidos</span>
+                </div>
+              </div>
+              <img src="https://blog.usro.net/media/2025/02/esp32-c-vs-c-1600x1067.jpg" class="card-img-bottom img-fluid rounded-bottom" alt="IoT">
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="wrap">
-      <p>© <span id="y"></span> Jader. Hecho con HTML5 semántico. Tema claro/oscuro con JS.</p>
+  <!-- FOOTER -->
+  <footer class="py-4 bg-dark text-center text-secondary">
+    <div class="container">
+      © <span id="y"></span> Jader. Hecho con HTML5 + Bootstrap.
     </div>
   </footer>
 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Tema + año -->
   <script>
-    // ====== Persistencia de tema (prefiere sistema + toggle) ======
     const root = document.documentElement;
     const themeToggle = document.getElementById('themeToggle');
     const saved = localStorage.getItem('theme');
@@ -131,12 +171,10 @@
       localStorage.setItem('theme', mode);
     }
 
-    // Inicial: respeta preferencia guardada o del SO
     if(saved){
       setTheme(saved);
-    }else{
-      const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
-      setTheme(prefersLight ? 'light' : 'dark');
+    } else {
+      setTheme('dark');
     }
 
     themeToggle.addEventListener('click', ()=>{
@@ -144,38 +182,6 @@
       setTheme(current === 'light' ? 'dark' : 'light');
     });
 
-    // ====== Realce de enlace activo al hacer scroll ======
-    const sections = [...document.querySelectorAll('section[id]')];
-    const links = [...document.querySelectorAll('nav a')];
-
-    const spy = new IntersectionObserver((entries)=>{
-      entries.forEach(entry=>{
-        const id = entry.target.getAttribute('id');
-        const link = links.find(a=> a.getAttribute('href') === '#' + id);
-        if(link){
-          if(entry.isIntersecting){
-            links.forEach(a=>a.classList.remove('is-active'));
-            link.classList.add('is-active');
-          }
-        }
-      });
-    }, {threshold: 0.6});
-
-    sections.forEach(sec=> spy.observe(sec));
-
-    // ====== Revelado suave de tarjetas ======
-    const reveal = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{
-        if(e.isIntersecting){
-          e.target.classList.add('revealed');
-          reveal.unobserve(e.target);
-        }
-      });
-    }, {threshold: .2});
-
-    document.querySelectorAll('.card').forEach(el=>reveal.observe(el));
-
-    // Año dinámico footer
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>

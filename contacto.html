@@ -3,80 +3,79 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mi Portafolio Web – Jader</title>
-  <meta name="description" content="Portafolio de Jader: Full Stack JS, automatización Cisco, microcontroladores y fabricación digital (3D/CNC)." />
+  <title>Contacto – Mi Portafolio Web</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-
-  
 </head>
-<body>
-  <header>
-    <div class="wrap">
-      <nav aria-label="Navegación principal">
-        <div class="nav-left">
-          <a href="./index.html">Sobre Mí</a>
-          <a href="./index.html">Intereses</a>
-          <a href="./index.html">Mis Proyectos</a>
-          <a href="./contacto.html">Contacto</a>
-        </div>
-        <div class="nav-right">
-          <button class="theme-btn" id="themeToggle" aria-label="Cambiar tema">🌗 Tema</button>
-        </div>
-      </nav>
+<body class="bg-body-custom text-light">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Jader</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html#sobre-mi">Sobre mí</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#intereses">Intereses</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#proyectos">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
+        </ul>
+        <button class="btn btn-outline-info btn-sm" id="themeToggle" type="button">🌗 Tema</button>
+      </div>
     </div>
-  </header>
+  </nav>
 
+  <main class="py-5">
+    <div class="container">
+      <h1 class="mb-4">Contacto</h1>
+      <div class="row justify-content-center">
+        <div class="col-lg-7">
+          <div class="card bg-card-custom border-0 shadow-sm">
+            <div class="card-body">
+              <p class="mb-4">¿Colaboramos? Escríbeme y conversemos tu proyecto.</p>
+              <form action="https://formsubmit.co/tecnico.jader@gmail.com" method="POST">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="gracias.html">
+                <input type="hidden" name="_subject" value="Nuevo mensaje desde el formulario de tu portafolio">
+                <input type="hidden" name="_template" value="table">
 
-    <main>
-        <!-- CONTACTO -->
-      <div class="wrap">
-        <h2 class="section-title" id="tit-contacto">Contacto</h2>
-        <div class="card">
-          <p>¿Colaboramos? Escríbeme y conversemos tu proyecto.</p>
-
-          <!-- 👇 Reemplaza TU-EMAIL@DOMINIO.COM por tu correo real -->
-          <form action="https://formsubmit.co/tecnico.jader@gmail.com" method="POST" aria-label="Formulario de contacto">
-            <!-- Antispam (honeypot) -->
-            <input type="text" name="_honey" style="display:none">
-            <!-- Desactivar captcha de FormSubmit -->
-            <input type="hidden" name="_captcha" value="false">
-            <!-- Redirección (opcional): pon tu propia página de gracias -->
-            <input type="hidden" name="_next" value="https://github.com/jaderkamui/portafolio/blob/main/gracias.html">
-            <input type="hidden" name="_subject" value="Nuevo mensaje desde el formulario de tu portafolio">
-            <input type="hidden" name="_template" value="table">
-
-            <div>
-              <label for="nombre">Nombre</label>
-              <input id="nombre" name="nombre" type="text" placeholder="Escribe tu nombre" required />
+                <div class="mb-3">
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Escribe tu nombre" required>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" name="email" id="email" class="form-control" placeholder="tucorreo@ejemplo.com" required>
+                </div>
+                <div class="mb-3">
+                  <label for="mensaje" class="form-label">Mensaje</label>
+                  <textarea name="mensaje" id="mensaje" rows="4" class="form-control" placeholder="Cuéntame sobre tu idea" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-info text-dark fw-semibold">Enviar mensaje</button>
+              </form>
+              <p class="mt-4 mb-0">
+                También puedes ver mi trabajo en
+                <a class="link-light" href="https://github.com/jaderkamui" target="_blank" rel="noopener">GitHub</a>
+                o conectar por
+                <a class="link-light" href="https://www.linkedin.com/in/jader-munoz-ramos-47046715a/" target="_blank" rel="noopener">LinkedIn</a>.
+              </p>
             </div>
-            <div>
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" placeholder="tucorreo@ejemplo.com" required />
-            </div>
-            <div>
-              <label for="mensaje">Mensaje</label>
-              <textarea id="mensaje" name="mensaje" placeholder="Cuéntame sobre tu idea" required></textarea>
-            </div>
-            <button type="submit">Enviar mensaje</button>
-          </form>
-
-          <p style="margin-top:10px">
-            También puedes ver mi trabajo en
-            <a class="link" href="https://github.com/jaderkamui" target="_blank" rel="noopener">GitHub</a>
-            o conectar por
-            <a class="link" href="https://www.linkedin.com/in/jader-munoz-ramos-47046715a/" target="_blank" rel="noopener">LinkedIn</a>.
-          </p>
+          </div>
         </div>
       </div>
-    </main>
-  <footer>
-    <div class="wrap">
-      <p>© <span id="y"></span> Jader. Hecho con HTML5 semántico. Tema claro/oscuro con JS.</p>
+    </div>
+  </main>
+
+  <footer class="py-4 bg-dark text-center text-secondary">
+    <div class="container">
+      © <span id="y"></span> Jader. Hecho con HTML5 + Bootstrap.
     </div>
   </footer>
 
-      <script>
-    // ====== Persistencia de tema (prefiere sistema + toggle) ======
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
     const root = document.documentElement;
     const themeToggle = document.getElementById('themeToggle');
     const saved = localStorage.getItem('theme');
@@ -86,12 +85,10 @@
       localStorage.setItem('theme', mode);
     }
 
-    // Inicial: respeta preferencia guardada o del SO
     if(saved){
       setTheme(saved);
-    }else{
-      const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
-      setTheme(prefersLight ? 'light' : 'dark');
+    } else {
+      setTheme('dark');
     }
 
     themeToggle.addEventListener('click', ()=>{
@@ -99,40 +96,7 @@
       setTheme(current === 'light' ? 'dark' : 'light');
     });
 
-    // ====== Realce de enlace activo al hacer scroll ======
-    const sections = [...document.querySelectorAll('section[id]')];
-    const links = [...document.querySelectorAll('nav a')];
-
-    const spy = new IntersectionObserver((entries)=>{
-      entries.forEach(entry=>{
-        const id = entry.target.getAttribute('id');
-        const link = links.find(a=> a.getAttribute('href') === '#' + id);
-        if(link){
-          if(entry.isIntersecting){
-            links.forEach(a=>a.classList.remove('is-active'));
-            link.classList.add('is-active');
-          }
-        }
-      });
-    }, {threshold: 0.6});
-
-    sections.forEach(sec=> spy.observe(sec));
-
-    // ====== Revelado suave de tarjetas ======
-    const reveal = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{
-        if(e.isIntersecting){
-          e.target.classList.add('revealed');
-          reveal.unobserve(e.target);
-        }
-      });
-    }, {threshold: .2});
-
-    document.querySelectorAll('.card').forEach(el=>reveal.observe(el));
-
-    // Año dinámico footer
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>
-
 </html>
